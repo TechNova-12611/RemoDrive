@@ -23,6 +23,9 @@ function listenGamepad() {
     let gamepads = navigator.getGamepads();
     for (var i = 0; i < gamepads.length; i++) {
         let gamepad: Gamepad = gamepads[i];
+        if (gamepad == null) {
+            continue
+        }
         for (var j = 0; j < gamepad.buttons.length; j++) {
             let button = gamepad.buttons[j];
             setBool(gamepadBtnMap[j], button.pressed);
