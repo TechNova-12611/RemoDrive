@@ -42,14 +42,14 @@ function keyboardListeners() {
     window.onkeydown = (e) => {
         if (e.keyCode in keyboardAxisMap) {
             setValue(keyboardAxisMap[e.keyCode].name, keyboardAxisMap[e.keyCode].value);
-        } else {
+        } else if (e.keyCode in keyboardBtnMap) {
             setBool(keyboardBtnMap[e.keyCode], true);
         }
     }
     window.onkeyup = (e) => {
         if (e.keyCode in keyboardAxisMap) {
             setValue(keyboardAxisMap[e.keyCode].name, 0);
-        } else {
+        } else if (e.keyCode in keyboardBtnMap) {
             setBool(keyboardBtnMap[e.keyCode], false);
         }
     }
