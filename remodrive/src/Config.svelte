@@ -1,33 +1,29 @@
 <script lang="ts">
-import { gamepad, keyboard, room } from "./stores";
+import { editing, gamepad, gamepad1, gamepad2, room } from "./stores";
+
+let editingStage = 0;
+
+function doneEditingGamepad(gamepadId: string) {
+    gamepad.set(gamepadId);
+    editingStage = 1;
+}
 </script>
 
-<div class="text-start">
-    <h2>Gamepad</h2>
+<div>
+    {#if editingStage == 0}
+        <btn class="btn btn-primary" on:click={() => {doneEditingGamepad(gamepad1)}}>Gamepad 1</btn>
 
-    <div class="form-check">
-        <input class="form-check-input" type="radio" name="gamepadRadio" value="g1" bind:group={$gamepad}>
-        <label class="form-check-label" for="flexRadioDefault1">
-            Gamepad 1
-        </label>
-    </div>
-    <div class="form-check">
-        <input class="form-check-input" type="radio" name="gamepadRadio" value="g2" bind:group={$gamepad}>
-        <label class="form-check-label" for="flexRadioDefault1">
-            Gamepad 2
-        </label>
-    </div>
+        or
+        
+        <btn class="btn btn-primary" on:click={() => {doneEditingGamepad(gamepad2)}}>Gamepad 2</btn>
 
-    <br>
-    <h2>Settings</h2>
-    <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" bind:checked={$keyboard}>
-        <span class="form-check-label">Keyboard</span>
-    </div>
+        ?
+    {/if}
 
-    <br>
-    <h2>Room</h2>
-    <input type="text" class="form-control" bind:value={$room}>
-    
-    <br>
+    {#if editingStage == 1}
+        <div class="input-group">
+            <input class="form-control" bind:value={$room} placeholder="Room Name..."/>
+            <button class="btn btn-success" disabled={$room == ""} on:click={() => {editing.set(false)}}>Drive!</button>
+        </div>
+    {/if}
 </div>
