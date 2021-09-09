@@ -14,7 +14,7 @@ import { editing, gamepad, gamepad1, keyboard, room } from "./stores";
         {/if}
 
         <div class="form-inline navbar-switch">
-            <span class="navbar-text navbar-switch-text">Keyboard</span>
+            <span class="navbar-text navbar-switch-text">{$keyboard ? "Keyboard" : "Gamepad" }</span>
             <div class="form-check form-switch">
                 <input class="form-check-input" type="checkbox" bind:checked={$keyboard}>
             </div>

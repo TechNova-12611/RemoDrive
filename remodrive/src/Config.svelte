@@ -1,5 +1,7 @@
 <script lang="ts">
-import { editing, gamepad, gamepad1, gamepad2, room } from "./stores";
+import { drive } from "./drive";
+
+import { gamepad, gamepad1, gamepad2, room } from "./stores";
 
 let editingStage = 0;
 
@@ -23,7 +25,7 @@ function doneEditingGamepad(gamepadId: string) {
     {#if editingStage == 1}
         <div class="input-group">
             <input class="form-control" bind:value={$room} placeholder="Room Name..."/>
-            <button class="btn btn-success" disabled={$room == ""} on:click={() => {editing.set(false)}}>Drive!</button>
+            <button class="btn btn-success" disabled={$room == ""} on:click={drive}>Drive!</button>
         </div>
     {/if}
 </div>
