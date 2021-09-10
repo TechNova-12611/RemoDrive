@@ -75,6 +75,20 @@ func host() {
 
 	// Create listen btn
 	btn := ui.NewButton("Host")
+
+	// Disable if empty
+	if len(roomname.Text()) == 0 {
+		btn.Disable()
+	}
+	roomname.OnChanged(func(*ui.Entry) {
+		if len(roomname.Text()) > 0 && !btn.Enabled() {
+			btn.Enable()
+		} else if len(roomname.Text()) == 0 && btn.Enabled() {
+			btn.Disable()
+		}
+	})
+
+	// onclick
 	btn.OnClicked(func(*ui.Button) {
 		if !isHosting {
 			hostname.SetReadOnly(true)
