@@ -93,8 +93,7 @@ func host() {
 				handle(err)
 
 				if grpconn == nil {
-					//TODO: Change to server
-					grpconn, err = grpc.Dial( /*"grpc.nv7haven.tk"*/ "localhost:49152", grpc.WithBlock(), grpc.WithInsecure())
+					grpconn, err = grpc.Dial("73.19.90.94:49152", grpc.WithBlock(), grpc.WithInsecure())
 					handle(err)
 					remodrive = pb.NewRemoDriveClient(grpconn)
 				}

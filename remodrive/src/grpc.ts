@@ -6,8 +6,7 @@ export var client: RemoDriveClient;
 export var conn: RequestStream<DriverMessage>;
 
 export function init_gRPC() {
-    // TODO: Change to server (rpc.nv7haven.tk)
-    client = new RemoDriveClient("http://localhost:3000");
+    client = new RemoDriveClient("https://rpc.nv7haven.tk");
 }
 
 export function connect() {
