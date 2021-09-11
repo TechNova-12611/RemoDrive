@@ -107,11 +107,11 @@ type keyboardAxis = {
 var keyboardAxisMap: Record<number, keyboardAxis> = {
     87: {
         name: "leftY",
-        value: 1
+        value: -1
     },
     83: {
         name: "leftY",
-        value: -1
+        value: 1
     },
     65: {
         name: "leftX",
