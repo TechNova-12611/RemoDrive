@@ -118,7 +118,7 @@ var keyboardAxisMap: Record<number, keyboardAxis> = {
         value: -1
     },
     68: {
-        name: "leftY",
+        name: "leftX",
         value: 1
     },
     38: {
