@@ -15,7 +15,7 @@ import { editing, keyboard } from "./stores";
 		{:else}
 			<h1>Keybinds</h1>
 
-			<p class="lead">An action on the gamepad is mirrored on the robot.</p>
+			<p class="lead">An action on the gamepad is mirrored on the robot. Toggle the switch in the top-right to simulate a gamepad with the keyboard.</p>
 		{/if}
 	{/if}
 </div>

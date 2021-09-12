@@ -1,7 +1,7 @@
 <div>
     <h1>Keybinds</h1>
 
-    <p class="lead">RemoDrive allows simulating a gamepad through the keyboard. You can switch to using a gamepad you have plugged in if you have one by toggling the switch in the top-right. These keybinds are based on the gamepad below.</p>
+    <p class="lead">RemoDrive allows simulating a gamepad through the keyboard. If you have a gamepad, plug it in and These keybinds are based on the gamepad below.</p>
     <img src="/static/gamepad.png" alt="Gamepad"/>
 
     <br>
@@ -32,36 +32,36 @@
                 <td>V</td>
             </tr>
             <tr>
-                <td>Period Key</td>
                 <td>Right Trigger</td>
+                <td>Period Key</td>
             </tr>
             <tr>
-                <td>Comma</td>
                 <td>Left Trigger</td>
+                <td>Comma</td>
             </tr>
             <tr>
-                <td>Apostrophe</td>
                 <td>Right Bumper</td>
+                <td>Apostrophe</td>
             </tr>
             <tr>
-                <td>Semicolon</td>
                 <td>Left Bumper</td>
+                <td>Semicolon</td>
             </tr>
             <tr>
-                <td>I</td>
                 <td>D-Pad Up</td>
+                <td>I</td>
             </tr>
             <tr>
-                <td>J</td>
                 <td>D-Pad Left</td>
+                <td>J</td>
             </tr>
             <tr>
-                <td>K</td>
                 <td>D-Pad Down</td>
+                <td>K</td>
             </tr>
             <tr>
-                <td>L</td>
                 <td>D-Pad Right</td>
+                <td>L</td>
             </tr>
         </tbody>
     </table>
