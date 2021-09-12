@@ -7,6 +7,10 @@ import (
 var isHosting = false
 var prt int
 
+var btn *ui.Button
+var hostname *ui.Entry
+var roomname *ui.Entry
+
 func host() {
 
 	// Create window
@@ -33,10 +37,10 @@ func host() {
 	form.SetPadded(true)
 
 	// Create form items
-	roomname := ui.NewEntry()
+	roomname = ui.NewEntry()
 	form.Append("Room", roomname, false)
 
-	hostname := ui.NewEntry()
+	hostname = ui.NewEntry()
 	hostname.SetText("192.168.43.1")
 	form.Append("Host", hostname, false)
 
@@ -51,7 +55,7 @@ func host() {
 	form.Append("Port", port, false)
 
 	// Create listen btn
-	btn := ui.NewButton("Host")
+	btn = ui.NewButton("Host")
 
 	// Disable if empty
 	if len(roomname.Text()) == 0 {
@@ -87,11 +91,7 @@ func host() {
 			return
 		}
 
-		hostname.SetReadOnly(false)
-		roomname.SetReadOnly(false)
 		cleanup()
-
-		btn.SetText("Host")
 	})
 
 	// Make UI

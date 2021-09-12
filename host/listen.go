@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"strings"
 
+	"github.com/andlabs/ui"
 	"github.com/gorilla/websocket"
 )
 
@@ -50,15 +51,29 @@ func listen() {
 }
 
 func cleanup() {
-	isHosting = false
+	ui.QueueMain(func() {
+		btn.SetText("Stopping...")
+		btn.Disable()
+	})
 
-	resp, err := http.Post("http://api.nv7haven.tk/close_room", "text/plain", strings.NewReader(room))
-	handle(err)
-	defer resp.Body.Close()
+	go func() {
+		resp, err := http.Post("http://api.nv7haven.tk/close_room", "text/plain", strings.NewReader(room))
+		handle(err)
+		defer resp.Body.Close()
 
-	_, err = io.ReadAll(resp.Body)
-	handle(err)
+		_, err = io.ReadAll(resp.Body)
+		handle(err)
 
-	err = conn.Close()
-	handle(err)
+		err = conn.Close()
+		handle(err)
+
+		isHosting = false
+
+		ui.QueueMain(func() {
+			hostname.SetReadOnly(false)
+			roomname.SetReadOnly(false)
+			btn.SetText("Host")
+			btn.Enable()
+		})
+	}()
 }
