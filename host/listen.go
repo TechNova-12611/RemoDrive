@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"net"
 	"net/http"
 	"strings"
@@ -22,7 +23,7 @@ func listen() {
 	handle(err)
 
 	// Connect
-	stream, _, err = websocket.DefaultDialer.Dial("ws://localhost:49153/host", nil)
+	stream, _, err = websocket.DefaultDialer.Dial("ws://http.nv7haven.tk/host", nil)
 	handle(err)
 
 	err = stream.WriteMessage(websocket.TextMessage, []byte(room))
@@ -37,6 +38,7 @@ func listen() {
 				return
 			}
 
+			fmt.Println(string(msg))
 			conn.Write(msg)
 		}
 	}()
