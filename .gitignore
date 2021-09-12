@@ -17,3 +17,4 @@
 # Built things
 RemoDrive
 RemoDrive*
+!host/RemoDrive.java
