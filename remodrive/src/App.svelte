@@ -2,7 +2,7 @@
 import Config from "./Config.svelte";
 import Instructions from "./Instructions.svelte";
 import Navbar from "./Navbar.svelte";
-import { editing } from "./stores";
+import { editing, keyboard } from "./stores";
 </script>
 
 <Navbar/>
@@ -10,6 +10,12 @@ import { editing } from "./stores";
 	{#if $editing}
 		<Config/>
 	{:else}
-		<Instructions/>
+		{#if $keyboard}
+			<Instructions/>
+		{:else}
+			<h1>Keybinds</h1>
+
+			<p class="lead">An action on the gamepad is mirrored on the robot.</p>
+		{/if}
 	{/if}
 </div>
