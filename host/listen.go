@@ -19,7 +19,7 @@ func listen() {
 	handle(err)
 
 	// Create Room
-	_, err = http.Post("http://localhost:8080/new_room", "text/plain", strings.NewReader(room))
+	_, err = http.Post("http://api.nv7haven.tk/new_room", "text/plain", strings.NewReader(room))
 	handle(err)
 
 	// Connect
@@ -49,7 +49,7 @@ func listen() {
 func cleanup() {
 	isHosting = false
 
-	_, err := http.Post("http://localhost:8080/close_room", "text/plain", strings.NewReader(room))
+	_, err := http.Post("http://api.nv7haven.tk/close_room", "text/plain", strings.NewReader(room))
 	handle(err)
 
 	err = conn.Close()
