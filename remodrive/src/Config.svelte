@@ -4,10 +4,20 @@ import { drive } from "./drive";
 import { gamepad, gamepad1, gamepad2, room } from "./stores";
 
 let editingStage = 0;
+let driveTxt = "Drive!";
+let driveDisabled = false;
 
 function doneEditingGamepad(gamepadId: string) {
     gamepad.set(gamepadId);
     editingStage = 1;
+}
+
+async function driveBot() {
+    driveDisabled = true;
+    driveTxt = "Connecting...";
+    await drive();
+    driveDisabled = false;
+    driveTxt = "Drive!";
 }
 </script>
 
@@ -25,7 +35,7 @@ function doneEditingGamepad(gamepadId: string) {
     {#if editingStage == 1}
         <div class="input-group">
             <input class="form-control" bind:value={$room} placeholder="Room Name..."/>
-            <button class="btn btn-success" disabled={$room == ""} on:click={drive}>Drive!</button>
+            <button class="btn btn-success" disabled={$room == "" || driveDisabled} on:click={driveBot}>{driveTxt}</button>
         </div>
     {/if}
 </div>

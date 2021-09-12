@@ -1,9 +1,9 @@
 import { listen } from "./listen";
-import { connect } from "./grpc";
+import { connect } from "./conn";
 import { editing } from "./stores";
 
-export function drive() {
+export async function drive() {
+	await connect();
 	editing.set(false);
-	connect();
 	listen();
 }

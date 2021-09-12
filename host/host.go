@@ -1,34 +1,11 @@
 package main
 
 import (
-	"context"
-	"io"
-	"net"
-
-	"github.com/Nv7-Github/RemoDrive/pb"
 	"github.com/andlabs/ui"
-	"google.golang.org/grpc"
-	"google.golang.org/protobuf/types/known/wrapperspb"
 )
 
 var isHosting = false
 var prt int
-
-var conn net.Conn
-var stream pb.RemoDrive_HostClient
-var room string
-
-var grpconn *grpc.ClientConn = nil
-var remodrive pb.RemoDriveClient
-
-func cleanup() {
-	isHosting = false
-
-	remodrive.CloseRoom(context.Background(), &wrapperspb.StringValue{Value: room})
-
-	err := conn.Close()
-	handle(err)
-}
 
 func host() {
 
@@ -101,37 +78,7 @@ func host() {
 			btn.SetText("Connecting")
 
 			go func() {
-				// Connect
-				var err error
-				conn, err = net.Dial("udp", "192.168.43.1:11039")
-				handle(err)
-
-				if grpconn == nil {
-					grpconn, err = grpc.Dial("73.19.90.94:49152", grpc.WithBlock(), grpc.WithInsecure())
-					handle(err)
-					remodrive = pb.NewRemoDriveClient(grpconn)
-				}
-
-				stream, err = remodrive.Host(context.Background(), &wrapperspb.StringValue{Value: room})
-				handle(err)
-
-				// Listen
-				go func() {
-					for {
-						msg, err := stream.Recv()
-						if err == io.EOF {
-							break
-						}
-						if err != nil {
-							panic(err)
-						}
-
-						conn.Write([]byte(msg.Command))
-					}
-				}()
-
-				isHosting = true
-
+				listen()
 				ui.QueueMain(func() {
 					btn.Enable()
 					btn.SetText("Stop")

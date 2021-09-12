@@ -1,4 +1,4 @@
-import { sendMessage } from "./grpc";
+import { sendMessage } from "./conn";
 import { gamepad } from "./stores";
 
 type Values = {
