@@ -53,6 +53,7 @@ var gamepadVal: string;
 gamepad.subscribe(gamepadValue => {gamepadVal = gamepadValue})
 
 export function setValue(name: string, value: number) {
+    value = Math.round(value * 100) / 100;
     if (values[name] != value) {
         values[name] = value;
         sendMessage(`${gamepadVal}_val_${name}_${value}`);
