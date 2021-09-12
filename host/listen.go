@@ -57,7 +57,7 @@ func cleanup() {
 	})
 
 	go func() {
-		resp, err := http.Post("http://api.nv7haven.tk/close_room", "text/plain", strings.NewReader(room))
+		resp, err := http.Post("https://api.nv7haven.tk/close_room", "text/plain", strings.NewReader(room))
 		handle(err)
 		defer resp.Body.Close()
 
