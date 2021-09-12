@@ -33,7 +33,7 @@
             </tr>
             <tr>
                 <td>Right Trigger</td>
-                <td>Period Key</td>
+                <td>Period</td>
             </tr>
             <tr>
                 <td>Left Trigger</td>
