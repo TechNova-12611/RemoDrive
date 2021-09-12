@@ -1,5 +1,6 @@
 <script lang="ts">
 import Config from "./Config.svelte";
+import Instructions from "./Instructions.svelte";
 import Navbar from "./Navbar.svelte";
 import { editing } from "./stores";
 </script>
@@ -8,5 +9,7 @@ import { editing } from "./stores";
 <div class="container text-center mt-3">
 	{#if $editing}
 		<Config/>
+	{:else}
+		<Instructions/>
 	{/if}
 </div>
