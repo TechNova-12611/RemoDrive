@@ -28,11 +28,15 @@ function listenGamepad() {
         }
         for (var j = 0; j < gamepad.buttons.length; j++) {
             let button = gamepad.buttons[j];
-            setBool(gamepadBtnMap[j], button.pressed);
+            if (j in gamepadBtnMap) {
+                setBool(gamepadBtnMap[j], button.pressed);
+            }
         }
         for (var j = 0; j < gamepad.axes.length; j++) {
             let axis = gamepad.axes[j];
-            setValue(gamepadAxisMap[j], axis);
+            if (j in gamepadAxisMap) {
+                setValue(gamepadAxisMap[j], axis);
+            }
         }
     }
 
