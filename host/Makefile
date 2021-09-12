@@ -12,10 +12,10 @@ build-exec:
 	go build -o RemoDrive -ldflags="-s -w"
 
 build-linux: build-exec
-	fyne package -os linux -icon ../remodrive/public/favicon.png RemoDrive
+	fyne package -os linux -icon ../remodrive/public/favicon.png -executable RemoDrive -name RemoDrive
 
-build-mac:
-	fyne package -os darwin -icon ../remodrive/public/favicon.png RemoDrive
+build-mac: build-exec
+	fyne package -os darwin -icon ../remodrive/public/favicon.png -executable RemoDrive -name RemoDrive
 
 build-windows-cross:
 	cd .. &&  docker run --rm -it -v "$(shell pwd):/go/work" -w /go/work x1unix/go-mingw pwd && cd host && go build -o RemoDrive.exe -ldflags="-s -w"
