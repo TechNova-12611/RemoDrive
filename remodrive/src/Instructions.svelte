@@ -1,7 +1,7 @@
 <div>
     <h1>Keybinds</h1>
 
-    <p class="lead">RemoDrive allows simulating a gamepad through the keyboard. If you have a gamepad, plug it in and toggle the switch in the top-righ to use it. These keybinds are based on the gamepad below.</p>
+    <p class="lead">RemoDrive allows simulating a gamepad through the keyboard. If you have a gamepad, plug it in and toggle the top-right switch. These keybinds are based on the gamepad below.</p>
     <img src="/static/gamepad.png" alt="Gamepad"/>
 
     <br>
@@ -10,58 +10,58 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th scope="col">Action</th>
-                <th scope="col">Key</th>
+                <th scope="col">Gamepad Controller</th>
+                <th scope="col">Keyboard</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>A Key</td>
-                <td>Z</td>
+                <td>(A)</td>
+                <td>[Z]</td>
             </tr>
             <tr>
-                <td>B Key</td>
-                <td>X</td>
+                <td>(B)</td>
+                <td>[X]</td>
             </tr>
             <tr>
-                <td>X Key</td>
-                <td>C</td>
+                <td>(X)</td>
+                <td>[C]</td>
             </tr>
             <tr>
-                <td>Y Key</td>
-                <td>V</td>
+                <td>(Y)</td>
+                <td>[V]</td>
             </tr>
             <tr>
                 <td>Right Trigger</td>
-                <td>Period</td>
+                <td>[.]</td>
             </tr>
             <tr>
                 <td>Left Trigger</td>
-                <td>Comma</td>
+                <td>[,]</td>
             </tr>
             <tr>
                 <td>Right Bumper</td>
-                <td>Apostrophe</td>
+                <td>[']</td>
             </tr>
             <tr>
                 <td>Left Bumper</td>
-                <td>Semicolon</td>
+                <td>[;]</td>
             </tr>
             <tr>
                 <td>D-Pad Up</td>
-                <td>I</td>
+                <td>[I]</td>
             </tr>
             <tr>
                 <td>D-Pad Left</td>
-                <td>J</td>
+                <td>[J]</td>
             </tr>
             <tr>
                 <td>D-Pad Down</td>
-                <td>K</td>
+                <td>[K]</td>
             </tr>
             <tr>
                 <td>D-Pad Right</td>
-                <td>L</td>
+                <td>[L]</td>
             </tr>
         </tbody>
     </table>
@@ -72,43 +72,43 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th scope="col">Action</th>
-                <th scope="col">Key</th>
+                <th scope="col">Gamepad Controller</th>
+                <th scope="col">Keyboard</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>Left Joystick Up</td>
-                <td>W</td>
+                <td>[W]</td>
             </tr>
             <tr>
                 <td>Left Joystick Left</td>
-                <td>A</td>
+                <td>[A]</td>
             </tr>
             <tr>
                 <td>Left Joystick Down</td>
-                <td>S</td>
+                <td>[S]</td>
             </tr>
             <tr>
                 <td>Left Joystick Right</td>
-                <td>D</td>
+                <td>[D]</td>
             </tr>
 
             <tr>
                 <td>Right Joystick Up</td>
-                <td>Up Arrow</td>
+                <td>[↑]</td>
             </tr>
             <tr>
                 <td>Right Joystick Left</td>
-                <td>Left Arrow</td>
+                <td>[←]</td>
             </tr>
             <tr>
                 <td>Right Joystick Down</td>
-                <td>Down Arrow</td>
+                <td>[↓]</td>
             </tr>
             <tr>
                 <td>Right Joystick Right</td>
-                <td>Right Arrow</td>
+                <td>[→]</td>
             </tr>
         </tbody>
     </table>
