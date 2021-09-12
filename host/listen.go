@@ -20,7 +20,7 @@ func listen() {
 	handle(err)
 
 	// Create Room
-	resp, err := http.Post("http://api.nv7haven.tk/new_room", "text/plain", strings.NewReader(room))
+	resp, err := http.Post("https://api.nv7haven.tk/new_room", "text/plain", strings.NewReader(room))
 	handle(err)
 	defer resp.Body.Close()
 
