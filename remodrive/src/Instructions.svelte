@@ -10,42 +10,42 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th scope="col">Action</th>
-                <th scope="col">Key</th>
+                <th scope="col">Gamepad Controller</th>
+                <th scope="col">Keyboard</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>A Key</td>
+                <td>(A)</td>
                 <td>Z</td>
             </tr>
             <tr>
-                <td>B Key</td>
+                <td>(B)</td>
                 <td>X</td>
             </tr>
             <tr>
-                <td>X Key</td>
+                <td>(X)</td>
                 <td>C</td>
             </tr>
             <tr>
-                <td>Y Key</td>
+                <td>(Y)</td>
                 <td>V</td>
             </tr>
             <tr>
                 <td>Right Trigger</td>
-                <td>Period Key</td>
+                <td>.</td>
             </tr>
             <tr>
                 <td>Left Trigger</td>
-                <td>Comma</td>
+                <td>,</td>
             </tr>
             <tr>
                 <td>Right Bumper</td>
-                <td>Apostrophe</td>
+                <td>'</td>
             </tr>
             <tr>
                 <td>Left Bumper</td>
-                <td>Semicolon</td>
+                <td>;</td>
             </tr>
             <tr>
                 <td>D-Pad Up</td>
@@ -96,19 +96,19 @@
 
             <tr>
                 <td>Right Joystick Up</td>
-                <td>Up Arrow</td>
+                <td>↑</td>
             </tr>
             <tr>
                 <td>Right Joystick Left</td>
-                <td>Left Arrow</td>
+                <td>←</td>
             </tr>
             <tr>
                 <td>Right Joystick Down</td>
-                <td>Down Arrow</td>
+                <td>↓</td>
             </tr>
             <tr>
                 <td>Right Joystick Right</td>
-                <td>Right Arrow</td>
+                <td>→</td>
             </tr>
         </tbody>
     </table>
