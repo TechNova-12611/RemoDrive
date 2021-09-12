@@ -1,7 +1,7 @@
 <div>
     <h1>Keybinds</h1>
 
-    <p class="lead">These keybinds are based on the gamepad below.</p>
+    <p class="lead">RemoDrive allows simulating a gamepad through the keyboard. You can switch to using a gamepad you have plugged in if you have one by toggling the switch in the top-right. These keybinds are based on the gamepad below.</p>
     <img src="/static/gamepad.png" alt="Gamepad"/>
 
     <br>
