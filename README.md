@@ -1,5 +1,5 @@
 # RemoDrive
-RemoDrive allows anyone to remotely control your FTC robot! Once you [setup a room](#setting-up-a-room), anyone can [join the room](#joining-a-room) and control your robot! This can be used for many things, like:
+RemoDrive allows anyone to remotely control your FTC robot! Once you [setup a room](#setting-up-a-room), anyone can [join the room](#joining-a-room) and control your robot using their keyboard or gamepad! This can be used for many things, like:
 - Letting outreach participants control a real robot
 - Letting remote team members control your team's robot
 
@@ -11,7 +11,7 @@ And more! If you want to create your own room, follow the [setting up a room ins
 3. Enter in the name of the room, which will be provided by the host
 4. Press join!
 
-Instructions on how to use the gamepad will be on-screen.
+Instructions on how to use your keyboard to emulate a gamepad will be on-screen.
 
 # Setting up a room
 RemoDrive has 3 parts: The Robot, The Host, and The Client.
