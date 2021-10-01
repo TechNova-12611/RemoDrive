@@ -18,3 +18,4 @@
 RemoDrive
 RemoDrive*
 !host/RemoDrive.java
+!remodrive/src/RemoDrive.svelte
