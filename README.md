@@ -3,7 +3,7 @@ RemoDrive allows anyone to remotely control your FTC robot! Once you [setup a ro
 - Letting outreach participants control a real robot
 - Letting remote team members control your team's robot
 
-And more! If you want to create your own room, follow the [setting up a room instructions](#setting-up-a-room), and if you want to join a room, follow the [joining a room instructions](#joining-a-room)!
+And more! If you want to create your own room, follow the [setting up a room instructions](#setting-up-a-room), and if you want to join a room, follow the [joining a room instructions](#joining-a-room)! 
 
 # Joining a Room
 1. Head to [the RemoDrive website](https://ftc12611.tk)
@@ -54,3 +54,7 @@ The Host needs to be connected to both the robot's WiFi Direct network and a net
 6. Press Host!
 
 Your room is now live! Give the name of the room to anyone who wants to join, and have them follow the [how to join instructions](#joining-a-room)!
+
+# Credits
+RemoDrive is heavily inspired by [TeleDrive](https://github.com/innov8rz-ftc-team-11039/TeleDrive-2.0), which is developed by [Mihir Chauhan](https://github.com/mihir-chauhan).
+RemoDrive is mostly developed by [Nv7](https://github.com/Nv7-GitHub) with contributions from the [FTC 12611 Team](https://github.com/TechNova-12611)
