@@ -58,6 +58,7 @@ public class RemoDrive {
 
     public void stop() {
         this.running = false;
+        this.socket.close();
     }
 
     final String GAMEPAD1 = "g1";
