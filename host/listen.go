@@ -20,7 +20,7 @@ func listen() {
 	handle(err)
 
 	// Create Room
-	resp, err := http.Post("https://api.nv7haven.tk/new_room", "text/plain", strings.NewReader(room))
+	resp, err := http.Post("https://api.nv7haven.com/new_room", "text/plain", strings.NewReader(room))
 	handle(err)
 	defer resp.Body.Close()
 
@@ -28,7 +28,7 @@ func listen() {
 	handle(err)
 
 	// Connect
-	stream, _, err = websocket.DefaultDialer.Dial("wss://http.nv7haven.tk/host", nil)
+	stream, _, err = websocket.DefaultDialer.Dial("wss://http.nv7haven.com/host", nil)
 	handle(err)
 
 	err = stream.WriteMessage(websocket.TextMessage, []byte(room))
@@ -57,7 +57,7 @@ func cleanup() {
 	})
 
 	go func() {
-		resp, err := http.Post("https://api.nv7haven.tk/close_room", "text/plain", strings.NewReader(room))
+		resp, err := http.Post("https://api.nv7haven.com/close_room", "text/plain", strings.NewReader(room))
 		handle(err)
 		defer resp.Body.Close()
 

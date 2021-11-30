@@ -6,7 +6,7 @@ var roomVal: string;
 room.subscribe(val => {roomVal = val});
 
 export async function connect(): Promise<void> {
-    conn = new WebSocket("wss://http.nv7haven.tk/drive")
+    conn = new WebSocket("wss://http.nv7haven.com/drive")
     return new Promise<void>((resolve) => {
         conn.onopen = () => {
             conn.send(roomVal);
