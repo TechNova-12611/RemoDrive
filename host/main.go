@@ -10,7 +10,7 @@ import (
 
 var win *ui.Window
 
-func handle(err error) {
+func handle(err error) bool {
 	if err != nil {
 		ui.QueueMain(func() {
 			ui.MsgBoxError(win, "Error!", err.Error())
@@ -19,7 +19,9 @@ func handle(err error) {
 			ui.Quit()
 			os.Exit(1)
 		})
+		return false
 	}
+	return true
 }
 
 func main() {

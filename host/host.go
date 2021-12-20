@@ -12,7 +12,6 @@ var hostname *ui.Entry
 var roomname *ui.Entry
 
 func host() {
-
 	// Create window
 	win = ui.NewWindow("RemoDrive", 0, 0, false)
 	win.OnClosing(func(*ui.Window) bool {

@@ -13,6 +13,7 @@ import (
 var conn net.Conn
 var stream *websocket.Conn
 var room string
+var names = map[string]struct{}{}
 
 func listen() {
 	var err error
@@ -43,7 +44,16 @@ func listen() {
 				return
 			}
 
-			conn.Write(msg)
+			if strings.HasPrefix(string(msg), "host_event_join") {
+				name := string(msg[len("host_event_join:"):])
+				names[name] = struct{}{}
+			} else if strings.HasPrefix(string(msg), "host_event_leave") {
+				name := string(msg[len("host_event_leave:"):])
+				delete(names, name)
+			} else {
+				conn.Write(msg)
+			}
+
 		}
 	}()
 
