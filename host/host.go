@@ -98,8 +98,7 @@ func host() {
 	uiNameModel := ui.NewTableModel(nameModel)
 	nameModel.m = uiNameModel
 	table := ui.NewTable(&ui.TableParams{
-		Model:                         uiNameModel,
-		RowBackgroundColorModelColumn: 3,
+		Model: uiNameModel,
 	})
 	table.AppendTextColumn("Name", 0, ui.TableModelColumnNeverEditable, nil) // Name column
 
