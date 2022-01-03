@@ -1,6 +1,8 @@
 package main
 
-import "github.com/andlabs/ui"
+import (
+	"github.com/andlabs/ui"
+)
 
 type NameModel struct {
 	Names []string
@@ -9,7 +11,9 @@ type NameModel struct {
 
 func (n *NameModel) AddName(name string) {
 	n.Names = append(n.Names, name)
-	n.m.RowInserted(len(n.Names) - 1) // Update
+	ui.QueueMain(func() {
+		n.m.RowInserted(len(n.Names) - 1) // Update
+	})
 }
 
 func (n *NameModel) RemoveName(name string) {
@@ -30,7 +34,9 @@ func (n *NameModel) RemoveName(name string) {
 	n.Names = n.Names[:len(n.Names)-1]
 
 	// Remove from table
-	n.m.RowDeleted(ind)
+	ui.QueueMain(func() {
+		n.m.RowDeleted(ind)
+	})
 }
 
 func (n *NameModel) ColumnTypes(m *ui.TableModel) []ui.TableValue {

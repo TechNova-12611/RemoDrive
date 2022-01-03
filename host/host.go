@@ -13,7 +13,7 @@ var roomname *ui.Entry
 
 func host() {
 	// Create window
-	win = ui.NewWindow("RemoDrive", 0, 0, false)
+	win = ui.NewWindow("RemoDrive", 750, 300, false)
 	win.OnClosing(func(*ui.Window) bool {
 		if isHosting {
 			cleanup()
@@ -108,7 +108,7 @@ func host() {
 
 	// Make UI
 	group.SetChild(form)
-	vbox.Append(group, true)
+	vbox.Append(group, false)
 	vbox.Append(nameGroup, true)
 	vbox.Append(btn, false)
 	win.SetChild(vbox)
