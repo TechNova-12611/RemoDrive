@@ -93,9 +93,23 @@ func host() {
 		cleanup()
 	})
 
+	// Make names
+	nameModel = &NameModel{}
+	uiNameModel := ui.NewTableModel(nameModel)
+	nameModel.m = uiNameModel
+	table := ui.NewTable(&ui.TableParams{
+		Model:                         uiNameModel,
+		RowBackgroundColorModelColumn: 3,
+	})
+	table.AppendTextColumn("Name", 0, ui.TableModelColumnNeverEditable, nil) // Name column
+
+	nameGroup := ui.NewGroup("People")
+	nameGroup.SetChild(table)
+
 	// Make UI
 	group.SetChild(form)
 	vbox.Append(group, true)
+	vbox.Append(nameGroup, true)
 	vbox.Append(btn, false)
 	win.SetChild(vbox)
 	win.Show()
