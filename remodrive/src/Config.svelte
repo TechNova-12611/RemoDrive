@@ -21,7 +21,7 @@ async function driveBot() {
 <div>
     <div class="input-group">
         <input type="text" class="form-control" bind:value={$room} placeholder="Room Name">
-        <input type="text" class="form-control" bind:value={$name} placeholder="Name">
+        <input type="text" class="form-control" bind:value={$name} placeholder="Your Name">
         <select class="form-select" bind:value={$gamepad}>
             <option value={gamepad1}>Gamepad 1</option>
             <option value={gamepad2}>Gamepad 2</option>
